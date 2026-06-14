@@ -1,26 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
-    <linearGradient id="rt" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ff6b8a"/>
-      <stop offset="50%" stop-color="#c0392b"/>
-      <stop offset="100%" stop-color="#7b0d1e"/>
+    <linearGradient id="gt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="50%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#92680a"/>
     </linearGradient>
-    <linearGradient id="rb" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#e84560"/>
-      <stop offset="100%" stop-color="#5c0011"/>
+    <linearGradient id="gb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5c842"/>
+      <stop offset="100%" stop-color="#713f12"/>
     </linearGradient>
-    <linearGradient id="rs" x1="0%" y1="0%" x2="60%" y2="100%">
-      <stop offset="0%" stop-color="#ffb3c1" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#ff6b8a" stop-opacity="0"/>
+    <linearGradient id="gs" x1="0%" y1="0%" x2="60%" y2="100%">
+      <stop offset="0%" stop-color="#fffde7" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#fde047" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <polygon points="32,6 16,22 24,22 20,14 32,18 44,14 40,22 48,22" fill="url(#rt)"/>
-  <polygon points="16,22 32,58 10,36" fill="url(#rb)"/>
-  <polygon points="48,22 32,58 54,36" fill="url(#rb)" opacity="0.85"/>
-  <polygon points="16,22 32,22 10,36" fill="url(#rt)" opacity="0.9"/>
-  <polygon points="48,22 32,22 54,36" fill="url(#rt)" opacity="0.75"/>
-  <polygon points="16,22 48,22 32,38" fill="url(#rt)" opacity="0.95"/>
-  <polygon points="10,36 54,36 32,58" fill="url(#rb)" opacity="0.7"/>
-  <polygon points="22,24 32,22 26,34" fill="url(#rs)" opacity="0.7"/>
-  <ellipse cx="24" cy="26" rx="3" ry="2" fill="white" opacity="0.35" transform="rotate(-20,24,26)"/>
+  <polygon points="32,6 16,22 24,22 20,14 32,18 44,14 40,22 48,22" fill="url(#gt)"/>
+  <polygon points="16,22 32,58 10,36" fill="url(#gb)"/>
+  <polygon points="48,22 32,58 54,36" fill="url(#gb)" opacity="0.85"/>
+  <polygon points="16,22 32,22 10,36" fill="url(#gt)" opacity="0.9"/>
+  <polygon points="48,22 32,22 54,36" fill="url(#gt)" opacity="0.75"/>
+  <polygon points="16,22 48,22 32,38" fill="url(#gt)" opacity="0.95"/>
+  <polygon points="10,36 54,36 32,58" fill="url(#gb)" opacity="0.7"/>
+  <polygon points="22,24 32,22 26,34" fill="url(#gs)" opacity="0.75"/>
+  <ellipse cx="24" cy="26" rx="3" ry="2" fill="white" opacity="0.5" transform="rotate(-20,24,26)"/>
 </svg>
