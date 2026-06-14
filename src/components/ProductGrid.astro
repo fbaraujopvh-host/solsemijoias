@@ -1,0 +1,83 @@
+---
+import { products, categories } from '../data/products';
+import ProductCard from './ProductCard.astro';
+---
+
+<section id="colecao" class="py-24 bg-cream">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <span class="text-gold-600 text-sm font-semibold uppercase tracking-[0.2em]">Nossa Vitrine</span>
+      <h2 class="section-title mt-2">Peças que encantam</h2>
+      <div class="divider-gold"></div>
+      <p class="section-subtitle max-w-xl mx-auto">
+        Cada peça é selecionada com cuidado para garantir beleza, qualidade e durabilidade incomparáveis.
+      </p>
+    </div>
+
+    <!-- Category Filter -->
+    <div class="flex flex-wrap items-center justify-center gap-3 mb-12" id="filter-container">
+      {categories.map((cat) => (
+        <button
+          data-category={cat.id}
+          class={`filter-btn px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border ${
+            cat.id === 'all'
+              ? 'bg-gold-600 text-white border-gold-600 shadow-md'
+              : 'bg-white text-charcoal border-gray-200 hover:border-gold-400 hover:text-gold-600'
+          }`}
+        >
+          {cat.label}
+        </button>
+      ))}
+    </div>
+
+    <!-- Products Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="products-grid">
+      {products.map((product) => (
+        <div data-category={product.category} class="product-item group animate-fade-in">
+          <ProductCard product={product} />
+        </div>
+      ))}
+    </div>
+
+    <!-- Load More -->
+    <div class="text-center mt-14">
+      <button class="btn-outline">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-5 h-5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+        </svg>
+        Carregar Mais Peças
+      </button>
+    </div>
+  </div>
+</section>
+
+<script>
+  const filterBtns = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+  const productItems = document.querySelectorAll<HTMLElement>('.product-item');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const category = btn.dataset.category;
+
+      // Update active button
+      filterBtns.forEach(b => {
+        b.classList.remove('bg-gold-600', 'text-white', 'border-gold-600', 'shadow-md');
+        b.classList.add('bg-white', 'text-charcoal', 'border-gray-200');
+      });
+      btn.classList.add('bg-gold-600', 'text-white', 'border-gold-600', 'shadow-md');
+      btn.classList.remove('bg-white', 'text-charcoal', 'border-gray-200');
+
+      // Filter products
+      productItems.forEach(item => {
+        if (category === 'all' || item.dataset.category === category) {
+          item.style.display = 'block';
+          item.style.animation = 'fadeIn 0.5s ease-out forwards';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>

@@ -1,0 +1,61 @@
+---
+interface Props {
+  size?: 'sm' | 'md' | 'lg';
+  dark?: boolean;
+}
+const { size = 'md', dark = false } = Astro.props;
+
+const iconSize = size === 'sm' ? 32 : size === 'lg' ? 48 : 38;
+const textClass = size === 'sm'
+  ? 'text-xl'
+  : size === 'lg'
+  ? 'text-3xl'
+  : 'text-2xl';
+---
+
+<a href="/" class="flex items-center gap-2.5 group select-none">
+  <!-- Ícone Sol -->
+  <svg
+    width={iconSize}
+    height={iconSize}
+    viewBox="0 0 64 64"
+    xmlns="http://www.w3.org/2000/svg"
+    class="flex-shrink-0 group-hover:rotate-12 transition-transform duration-500"
+  >
+    <defs>
+      <radialGradient id={`sg-${size}`} cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#fde047"/>
+        <stop offset="55%" stop-color="#d4af37"/>
+        <stop offset="100%" stop-color="#b8860b"/>
+      </radialGradient>
+    </defs>
+    <!-- Raios -->
+    <g transform="translate(32,32)" stroke={`url(#sg-${size})`} stroke-linecap="round" stroke-width="3.5">
+      <line x1="0"    y1="-28"   x2="0"    y2="-19"/>
+      <line x1="14"   y1="-24.2" x2="9.5"  y2="-16.5"/>
+      <line x1="24.2" y1="-14"   x2="16.5" y2="-9.5"/>
+      <line x1="28"   y1="0"     x2="19"   y2="0"/>
+      <line x1="24.2" y1="14"    x2="16.5" y2="9.5"/>
+      <line x1="14"   y1="24.2"  x2="9.5"  y2="16.5"/>
+      <line x1="0"    y1="28"    x2="0"    y2="19"/>
+      <line x1="-14"  y1="24.2"  x2="-9.5" y2="16.5"/>
+      <line x1="-24.2" y1="14"   x2="-16.5" y2="9.5"/>
+      <line x1="-28"  y1="0"     x2="-19"  y2="0"/>
+      <line x1="-24.2" y1="-14"  x2="-16.5" y2="-9.5"/>
+      <line x1="-14"  y1="-24.2" x2="-9.5" y2="-16.5"/>
+    </g>
+    <!-- Núcleo -->
+    <circle cx="32" cy="32" r="13.5" fill={`url(#sg-${size})`}/>
+    <circle cx="32" cy="32" r="8" fill="#fef9c3" opacity="0.55"/>
+  </svg>
+
+  <!-- Texto -->
+  <div class="flex flex-col leading-none">
+    <span class={`font-serif font-bold ${textClass} ${dark ? 'text-white' : 'text-charcoal'} tracking-tight`}>
+      Sol
+    </span>
+    <span class={`text-[10px] font-medium uppercase tracking-[0.18em] ${dark ? 'text-gold-300' : 'text-gold-600'} -mt-0.5`}>
+      Semi-Joias
+    </span>
+  </div>
+</a>

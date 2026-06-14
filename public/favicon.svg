@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <radialGradient id="sunGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="60%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#b8860b"/>
+    </radialGradient>
+  </defs>
+  <!-- Raios do sol -->
+  <g transform="translate(32,32)" stroke="url(#sunGrad)" stroke-linecap="round" stroke-width="3">
+    <line x1="0" y1="-28" x2="0" y2="-20"/>
+    <line x1="14" y1="-24.2" x2="10" y2="-17.3"/>
+    <line x1="24.2" y1="-14" x2="17.3" y2="-10"/>
+    <line x1="28" y1="0" x2="20" y2="0"/>
+    <line x1="24.2" y1="14" x2="17.3" y2="10"/>
+    <line x1="14" y1="24.2" x2="10" y2="17.3"/>
+    <line x1="0" y1="28" x2="0" y2="20"/>
+    <line x1="-14" y1="24.2" x2="-10" y2="17.3"/>
+    <line x1="-24.2" y1="14" x2="-17.3" y2="10"/>
+    <line x1="-28" y1="0" x2="-20" y2="0"/>
+    <line x1="-24.2" y1="-14" x2="-17.3" y2="-10"/>
+    <line x1="-14" y1="-24.2" x2="-10" y2="-17.3"/>
+  </g>
+  <!-- Núcleo do sol -->
+  <circle cx="32" cy="32" r="13" fill="url(#sunGrad)"/>
+  <circle cx="32" cy="32" r="9" fill="#fef08a" opacity="0.6"/>
+</svg>

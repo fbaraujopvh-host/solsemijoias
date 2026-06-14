@@ -1,0 +1,105 @@
+---
+---
+
+<section id="sobre" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Images -->
+      <div class="relative order-2 lg:order-1">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="space-y-4">
+            <div class="rounded-2xl overflow-hidden aspect-[3/4] shadow-xl">
+              <img
+                src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=500&q=80"
+                alt="Artesã criando semi-joias"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+              />
+            </div>
+            <div class="rounded-2xl overflow-hidden aspect-square shadow-lg">
+              <img
+                src="https://images.unsplash.com/photo-1573408301185-9519f94815ca?w=400&q=80"
+                alt="Peças exclusivas"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="space-y-4 pt-8">
+            <div class="rounded-2xl overflow-hidden aspect-square shadow-lg">
+              <img
+                src="https://images.unsplash.com/photo-1596944924591-2a225e088bdc?w=400&q=80"
+                alt="Detalhes de joalheria"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+              />
+            </div>
+            <div class="rounded-2xl overflow-hidden aspect-[3/4] shadow-xl">
+              <img
+                src="https://images.unsplash.com/photo-1630019925419-5a47e0b73f3c?w=400&q=80"
+                alt="Brincos artesanais"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating card -->
+        <div class="absolute bottom-8 -right-4 bg-white rounded-2xl shadow-2xl p-5 border border-gold-100 max-w-[200px]">
+          <div class="flex items-center gap-2 mb-2">
+            <div class="w-8 h-8 gold-gradient rounded-lg flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-4 h-4">
+                <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
+              </svg>
+            </div>
+            <span class="font-serif text-sm font-bold text-charcoal">Feito com amor</span>
+          </div>
+          <p class="text-gray-500 text-xs leading-relaxed">Cada peça criada com cuidado e dedicação para você.</p>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="order-1 lg:order-2">
+        <span class="text-gold-600 text-sm font-semibold uppercase tracking-[0.2em]">Nossa História</span>
+        <h2 class="section-title mt-2 mb-2">Nascemos para realçar <span class="text-gold-gradient">sua beleza</span></h2>
+        <div class="w-16 h-1 rounded-full bg-gradient-to-r from-gold-400 to-gold-600 mb-6"></div>
+
+        <p class="text-gray-600 leading-relaxed mb-5">
+          A <strong class="text-charcoal">Sol Semi-Joias</strong> nasceu da paixão por acessórios que combinam beleza,
+          qualidade e acessibilidade. Acreditamos que toda mulher merece se sentir especial — seja num dia comum ou
+          numa grande ocasião.
+        </p>
+        <p class="text-gray-600 leading-relaxed mb-8">
+          Nossas semi-joias são cuidadosamente selecionadas de fornecedores certificados, garantindo banhos de ouro
+          18k e prata 925 com espessura que faz diferença: mais durabilidade, mais brilho, mais você.
+        </p>
+
+        <div class="grid grid-cols-2 gap-6 mb-8">
+          {[
+            { number: '5+', label: 'Anos de experiência' },
+            { number: '150+', label: 'Modelos exclusivos' },
+            { number: '2k+', label: 'Clientes satisfeitas' },
+            { number: '98%', label: 'Aprovação dos pedidos' },
+          ].map(stat => (
+            <div class="flex items-start gap-3">
+              <div class="w-1 h-full min-h-[48px] rounded-full gold-gradient flex-shrink-0"></div>
+              <div>
+                <p class="font-serif text-3xl font-bold text-gold-600">{stat.number}</p>
+                <p class="text-gray-500 text-sm">{stat.label}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <a href="#colecao" class="btn-primary">
+          Conhecer a Coleção
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

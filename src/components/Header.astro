@@ -1,0 +1,103 @@
+---
+import Logo from './Logo.astro';
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="main-header">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+
+      <!-- Logo -->
+      <Logo size="md" />
+
+      <!-- Nav Desktop -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="/" class="text-sm font-medium text-charcoal hover:text-gold-600 transition-colors duration-200 relative group">
+          Início
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-500 group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="#colecao" class="text-sm font-medium text-charcoal hover:text-gold-600 transition-colors duration-200 relative group">
+          Coleção
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-500 group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="#categorias" class="text-sm font-medium text-charcoal hover:text-gold-600 transition-colors duration-200 relative group">
+          Categorias
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-500 group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="#sobre" class="text-sm font-medium text-charcoal hover:text-gold-600 transition-colors duration-200 relative group">
+          Sobre
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-500 group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="#contato" class="text-sm font-medium text-charcoal hover:text-gold-600 transition-colors duration-200 relative group">
+          Contato
+          <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold-500 group-hover:w-full transition-all duration-300"></span>
+        </a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="flex items-center gap-3">
+        <!-- Search -->
+        <button class="w-10 h-10 flex items-center justify-center text-charcoal hover:text-gold-600 transition-colors duration-200 rounded-full hover:bg-gold-50">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+          </svg>
+        </button>
+
+        <!-- Cart -->
+        <button class="relative w-10 h-10 flex items-center justify-center text-charcoal hover:text-gold-600 transition-colors duration-200 rounded-full hover:bg-gold-50">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm5.625 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+          </svg>
+          <span class="absolute -top-0.5 -right-0.5 w-4 h-4 bg-rose-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center">3</span>
+        </button>
+
+        <!-- CTA -->
+        <a href="#colecao" class="hidden sm:inline-flex btn-primary text-sm py-2.5 px-5">
+          Ver Coleção
+        </a>
+
+        <!-- Mobile Menu -->
+        <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-charcoal hover:text-gold-600 transition-colors duration-200">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gold-100 shadow-lg">
+    <div class="px-4 py-4 space-y-1">
+      <a href="/" class="block px-4 py-3 text-charcoal hover:text-gold-600 hover:bg-gold-50 rounded-xl font-medium transition-colors duration-200">Início</a>
+      <a href="#colecao" class="block px-4 py-3 text-charcoal hover:text-gold-600 hover:bg-gold-50 rounded-xl font-medium transition-colors duration-200">Coleção</a>
+      <a href="#categorias" class="block px-4 py-3 text-charcoal hover:text-gold-600 hover:bg-gold-50 rounded-xl font-medium transition-colors duration-200">Categorias</a>
+      <a href="#sobre" class="block px-4 py-3 text-charcoal hover:text-gold-600 hover:bg-gold-50 rounded-xl font-medium transition-colors duration-200">Sobre</a>
+      <a href="#contato" class="block px-4 py-3 text-charcoal hover:text-gold-600 hover:bg-gold-50 rounded-xl font-medium transition-colors duration-200">Contato</a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const header = document.getElementById('main-header');
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  // Scroll effect
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      header?.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-sm', 'border-b', 'border-gold-100');
+    } else {
+      header?.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-sm', 'border-b', 'border-gold-100');
+    }
+  });
+
+  // Mobile menu toggle
+  mobileBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+
+  // Close mobile menu on link click
+  mobileMenu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => mobileMenu?.classList.add('hidden'));
+  });
+</script>

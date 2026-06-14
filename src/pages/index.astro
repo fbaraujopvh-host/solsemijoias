@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
+import Categories from '../components/Categories.astro';
+import ProductGrid from '../components/ProductGrid.astro';
+import About from '../components/About.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Newsletter from '../components/Newsletter.astro';
+import Footer from '../components/Footer.astro';
+
+import '../styles/global.css';
+---
+
+<Layout
+  title="Sol Semi-Joias — Coleção Exclusiva Banhada a Ouro 18k"
+  description="Descubra nossa coleção exclusiva de semi-joias banhadas a ouro 18k e prata 925. Colares, pulseiras, brincos e anéis com qualidade de joalheria premium."
+>
+  <Header />
+  <main>
+    <Hero />
+    <Features />
+    <Categories />
+    <ProductGrid />
+    <About />
+    <Testimonials />
+    <Newsletter />
+  </main>
+  <Footer />
+</Layout>
